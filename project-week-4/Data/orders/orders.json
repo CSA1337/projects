@@ -1,0 +1,14 @@
+[
+    {
+        "customer_name": "James",
+        "customer_address": "2 broader",
+        "customer_phone": "07567612343",
+        "order_status": "Received"
+    },
+    {
+        "customer_name": "Alex",
+        "customer_address": "London",
+        "customer_phone": "07599988878",
+        "order_status": "Received"
+    }
+]

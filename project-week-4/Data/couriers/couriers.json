@@ -1,0 +1,14 @@
+[
+    {
+        "customer_name": "Bob",
+        "courier_name": "FedeX",
+        "customer_address": "Luton",
+        "customer_phone": "07654512390"
+    },
+    {
+        "customer_name": "George",
+        "courier_name": "RoyalMail",
+        "customer_address": "Scotland",
+        "customer_phone": "07412390912"
+    }
+]
