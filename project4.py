@@ -43,7 +43,7 @@ def clear():
 		_ = system('clear')
 
 if __name__ == "__main__":
-    load_products()
+    load_product()
     load_orders()
     load_courier()
     main()

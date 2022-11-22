@@ -1,19 +1,18 @@
 from ..pull import *
+from tabulate import tabulate
+import copy
 from ..banners import product_banner
 
-products = []
 
-file_location = 'Data/products/products.txt'
+product = {}
+
+def load_product():
+    global products 
+    products = pull_data('Data/products/products.json')
+
 def write_product():
-    with open (file_location, 'w') as file:
-        for product in products:
-            file.write(product)
-            file.write("\n")
+    save_data(products, 'Data/products/products.json')
 
-def load_products():
-    file = open(file_location, 'r')
-    for line in file.readlines():
-        products.append(line.rstrip("\n"))
 
 def product_menu():
     while True:
@@ -33,6 +32,7 @@ def product_menu():
             print_product()
         elif choice == 2:
             create_product()
+            print("Product has been created...")
         elif choice == 3:
             print_product()
             update_product()
@@ -44,40 +44,48 @@ def product_menu():
             
 
 def print_product():
-    print("+=======================+")
-    print("|   ALL   PRODUCTS      |")
-    print("+=======================+")
-    for x in range(len(products)):
-        print(f"[{x}] - ", products[x])
-    print("+=======================+")
+    print(tabulate(products,showindex=True,headers='keys',tablefmt='fancy_grid'))
 
 def create_product():
-    product_name = input("\nProduct Name: ")
-    products.append(product_name.title())
-    write_product()
+    while True:
+        name = input("Product Name: ")
+        if name.isalpha() == True:
+            product["product_name"] = name.title()
+            break
+        else:
+            error()
+            continue
+    price = input("Price: ")
+    product["Price"] = price
+    dict_copy = copy.deepcopy(product)
+    products.append(dict_copy)
 
 def update_product():
     while True:
         try:
-            Choice = int(input("Which product you like to update: "))
-            products[Choice]
-            product = input("Enter updated product: ")
-            products[Choice] = product.title()
+            option = int(input("Option: "))
+            product = products[option]
             break
         except:
             error()
             continue
-    write_product()
+    for key, value in product.items():
+        print(f"Key: {key}, Value: {value}")
+        new_value = input("Enter New Value: ")
+        if new_value.strip() == '':
+            continue
+        else:
+            product[key] = new_value
 
 def delete_product():
     while True:
         try:
-            choice = int(input("Which product you like to delete: "))
+            option = int(input("Which product you want to delete: "))
+            product = products[option]
+            break
         except:
             error()
             continue
-        del products[choice]
-        break
-    write_product()
+    products.remove(product)
 
     
