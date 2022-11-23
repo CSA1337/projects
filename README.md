@@ -6,13 +6,14 @@ The python project stores and fetch the data from the JSON file. Any changes mad
 - Data should be persisted to a .csv file on a new line for each courier, order, and product.
 
 ### How did your design go about meeting the project's requirements?
-Almost 90% of the project requirements have been accomplished apart from the unit testing.
+Almost 90% of the project requirements have been accomplished. The product should be a dictionary, but it is a list in this project.
 
 ### How did you guarantee the project's requirements?
-Sharing program with peers to makesure the functionality works expected.
+Sharing program with peers to makesure the functionality work as expected
 
 ### If you had more time, what is one thing you would improve upon?
-OOP programming and unit testing
+- OOP programming 
+- Unit testing
 
 ### What did you most enjoy implementing?
-Implementing the python echo system and separating files from the main python file. Making the program more small and clean.
+Implementing the UI/UX design, python echo system and separating files from the main python file. Making the program more small and handling the wrong input.
