@@ -9,7 +9,7 @@ The python project stores and fetch the data from the JSON file. Any changes mad
 Almost 90% of the project requirements have been accomplished apart from the unit testing.
 
 ### How did you guarantee the project's requirements?
-Making sure everyone's on the same page, including the stakeholders.
+Sharing program with peers to makesure the functionality works expected.
 
 ### If you had more time, what is one thing you would improve upon?
 OOP programming and unit testing
