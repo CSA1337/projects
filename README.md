@@ -17,3 +17,6 @@ Sharing program with peers to makesure the functionality work as expected
 
 ### What did you most enjoy implementing?
 Implementing the UI/UX design, python echo system and separating files from the main python file. Making the program more small and handling the wrong input.
+
+### Github Workflow
+Testing
